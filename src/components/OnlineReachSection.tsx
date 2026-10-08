@@ -42,7 +42,7 @@ export const OnlineReachSection: React.FC = () => {
           <div className="lg:col-span-5 relative order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl group">
               <img
-                src=egyptLearningReach
+                src={egyptLearningReach}
                 alt="EPT Academy Egypt Geographic Learning Network"
                 referrerPolicy="no-referrer"
                 className="w-full h-80 sm:h-96 object-cover group-hover:scale-102 transition-transform duration-500"
