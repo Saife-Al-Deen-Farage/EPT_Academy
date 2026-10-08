@@ -1,3 +1,10 @@
+import realStudentCodingLab from '../assets/images/real_student_coding_lab_1791457660513.jpg';
+import realStudentsLabGroup from '../assets/images/real_students_lab_group_1791457670891.jpg';
+import realComputerWorkstations from '../assets/images/real_computer_workstations_1791457682176.jpg';
+import realEnglishLectureHall from '../assets/images/real_english_lecture_hall_1791457694461.jpg';
+import realReceptionLounge from '../assets/images/real_reception_lounge_1791457724273.jpg';
+import realEntranceStairsWallart from '../assets/images/real_entrance_stairs_wallart_1791457711230.jpg';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
 import { 
@@ -61,7 +68,7 @@ export const REAL_FACILITIES: FacilitySlide[] = [
     titleEn: 'Live Coding Workstations & Dual-Display Setups',
     descAr: 'صورة واقعية من داخل معمل البرمجة بأكاديمية EPT بسوهاج. يعمل كل متدرب على محطة حاسوبية مجهزة بشاشات مزدوجة وإضاءة محيطية تفاعلية ولوحات مفاتيح احترافية لكتابة أكواد C#، بايثون، وتطوير الويب تحت إشراف مباشر.',
     descEn: 'Authentic photograph inside EPT Academy coding lab in Sohag. Students train on dual-monitor workstations with IDEs and ambient lighting for deep coding focus.',
-    image: '/src/assets/images/real_student_coding_lab_1791457660513.jpg',
+    image: realStudentCodingLab,
     badgeAr: 'معمل التكنولوجيا – LAB TECHNOLOGY',
     badgeEn: 'Lab Technology Official',
     auraColor: 'from-blue-600/30 via-cyan-500/15 to-transparent',
@@ -107,7 +114,7 @@ export const REAL_FACILITIES: FacilitySlide[] = [
     titleEn: 'Thriving Learner Cohorts with Neon Ambience',
     descAr: 'لقطة تجمع طلاب أحد أفواجنا التدريبية داخل المعمل تحت لافتة النيون الشهيرة "EPT TECHNOLOGY PROFESSIONALS". بيئة تشجع روح العمل الجماعي والابتكار وتبادل الأفكار البرمجية وتحديات الهاكاثون المصغرة.',
     descEn: 'Real student cohort inside the training hall beneath the glowing EPT Technology Professionals neon wall sign, celebrating milestones and shared coding progress.',
-    image: '/src/assets/images/real_students_lab_group_1791457670891.jpg',
+    image: realStudentsLabGroup,
     badgeAr: 'لافتة نيون: EPT TECHNOLOGY PROFESSIONALS',
     badgeEn: 'Neon Sign: EPT Professionals',
     auraColor: 'from-amber-500/35 via-orange-500/20 to-transparent',
@@ -144,7 +151,7 @@ export const REAL_FACILITIES: FacilitySlide[] = [
     titleEn: 'Full Multi-Station Workstation Bench',
     descAr: 'منظر بانورامي لمعمل التكنولوجيا موضحًا صفوف الأجهزة المستمرة، لوحات المفاتيح والفأرات المخصصة للعمل المريح، وتكييف هواء ومجسمات إضاءة دافئة لخلق مناخ تعليمي فريد يمتد لساعات دون إجهاد.',
     descEn: 'Panoramic view of the computer lab showing continuous workstation desks, ergonomic seating, responsive monitors, and ambient illumination.',
-    image: '/src/assets/images/real_computer_workstations_1791457682176.jpg',
+    image: realComputerWorkstations,
     badgeAr: 'تجهيزات متكاملة ومعامل مكيفة',
     badgeEn: 'Air-Conditioned Tech Lab',
     auraColor: 'from-indigo-600/30 via-blue-500/15 to-transparent',
@@ -181,7 +188,7 @@ export const REAL_FACILITIES: FacilitySlide[] = [
     titleEn: 'English Plus Hall with Presentation Screen & Podium',
     descAr: 'القاعة المخصصة لدورات اللغة الإنجليزية التقنية ومحاضرات تطوير المهارات. مزودة بمنصة خشبية لتدريب الطلاب على التحدث والعرض (Public Speaking)، شاشة عرض تفاعلية، وسبورة بيضاء لشرح القواعد والمصطلحات.',
     descEn: 'Dedicated hall for English Plus, soft skills, and tech presentations equipped with speaker podium, 55-inch interactive screen, and lecture seating.',
-    image: '/src/assets/images/real_english_lecture_hall_1791457694461.jpg',
+    image: realEnglishLectureHall,
     badgeAr: 'قاعة اللغات والمحاضرات – LEARN ENGLISH',
     badgeEn: 'Learn English Classroom',
     auraColor: 'from-blue-600/30 via-indigo-600/20 to-transparent',
@@ -218,7 +225,7 @@ export const REAL_FACILITIES: FacilitySlide[] = [
     titleEn: 'Reception Lounge with Green Turf & Guidance Hub',
     descAr: 'صالة انتظار واستقبال رحبة مكسوة بأرضية النجيل الصناعي الأخضر، تمنح الزائر شعورًا بالراحة والبهجة، وتضم مكتب الاستقبال وبوسترات الأكاديمية التعريفية الشاملة لكافة مسارات التكنولوجيا واللغة.',
     descEn: 'Bright welcoming student reception hall with green turf flooring, reception desk, official banners, and comfortable waiting seating.',
-    image: '/src/assets/images/real_reception_lounge_1791457724273.jpg',
+    image: realReceptionLounge,
     badgeAr: 'سوهاج – مركز جهينة (المقر الرئيسي)',
     badgeEn: 'Sohag – Gehana HQ Reception',
     auraColor: 'from-emerald-500/30 via-teal-500/15 to-transparent',
@@ -255,7 +262,7 @@ export const REAL_FACILITIES: FacilitySlide[] = [
     titleEn: 'Iconic Staircase Mural: Learn · Code · Build The Future',
     descAr: 'مدخل الأكاديمية ودرج الرخام الأنيق الذي يستقبلك بجدارية ملهمة تختصر رسالة الأكاديمية: "تعلم، برمج، وابنِ المستقبل" مع رمز الأكواد البرمجية </> وشعار EPT كأول ما يراه الطالب والزائر.',
     descEn: 'The marble entrance staircase greeting learners with the motivational typographic wall installation: Learn, Code, Build The Future.',
-    image: '/src/assets/images/real_entrance_stairs_wallart_1791457711230.jpg',
+    image: realEntranceStairsWallart,
     badgeAr: 'جدارية المستقبل: LEARN CODE BUILD',
     badgeEn: 'Inspirational Entrance Art',
     auraColor: 'from-amber-400/25 via-blue-600/20 to-transparent',
