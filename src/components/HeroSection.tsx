@@ -1,3 +1,9 @@
+import realStudentCodingLab from '../assets/images/real_student_coding_lab_1791457660513.jpg';
+import realStudentsLabGroup from '../assets/images/real_students_lab_group_1791457670891.jpg';
+import realComputerWorkstations from '../assets/images/real_computer_workstations_1791457682176.jpg';
+import realEnglishLectureHall from '../assets/images/real_english_lecture_hall_1791457694461.jpg';
+import realEntranceStairsWallart from '../assets/images/real_entrance_stairs_wallart_1791457711230.jpg';
+
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { 
@@ -27,7 +33,7 @@ export const HeroSection: React.FC = () => {
       tagEn: 'Coding & Tech Lab',
       headlineAr: 'محطات بشاشات مزدوجة وتطبيق عملي من أول جلسة',
       headlineEn: 'Dual-screen workstations & hands-on execution',
-      image: '/src/assets/images/real_student_coding_lab_1791457660513.jpg',
+      image: realStudentCodingLab,
       badgeAr: 'معامل مجهزة في سوهاج',
       badgeEn: 'Modern Hardware in Sohag',
       highlightAr: 'لافتة: TECHNOLOGY IS THE FUTURE',
@@ -39,7 +45,7 @@ export const HeroSection: React.FC = () => {
       tagEn: 'Student Community & Neon',
       headlineAr: 'بيئة تقنية ملهمة تحت لافتة النيون الشهيرة',
       headlineEn: 'Inspiring software studio vibe under signature neon',
-      image: '/src/assets/images/real_students_lab_group_1791457670891.jpg',
+      image: realStudentsLabGroup,
       badgeAr: 'لافتة نيون الأكاديمية الأصلية',
       badgeEn: 'Original Neon Wall Art',
       highlightAr: 'EPT TECHNOLOGY PROFESSIONALS',
@@ -51,7 +57,7 @@ export const HeroSection: React.FC = () => {
       tagEn: 'Full Lab Workstations',
       headlineAr: 'شاشات عريضة مريحة للعين ومقاعد تدريب مريحة',
       headlineEn: 'Wide high-contrast IPS displays & ergonomic setup',
-      image: '/src/assets/images/real_computer_workstations_1791457682176.jpg',
+      image: realComputerWorkstations,
       badgeAr: 'معامل مكيفة وشبكة فايبر',
       badgeEn: 'Fiber Network & AC Labs',
       highlightAr: 'IPS High-Resolution Workstations',
@@ -63,7 +69,7 @@ export const HeroSection: React.FC = () => {
       tagEn: 'English Plus & Presentation Hall',
       headlineAr: 'منصة تدريب الإلقاء وشاشة عرض ذكية 55 بوصة',
       headlineEn: 'Public speaking podium & 55" presentation display',
-      image: '/src/assets/images/real_english_lecture_hall_1791457694461.jpg',
+      image: realEnglishLectureHall,
       badgeAr: 'تدريب النطق والإلقاء التقني',
       badgeEn: 'Pitching & Soft Skills Studio',
       highlightAr: 'LEARN ENGLISH FOR TECH',
@@ -75,7 +81,7 @@ export const HeroSection: React.FC = () => {
       tagEn: 'Entrance Marble Stairs & Mural',
       headlineAr: 'جدارية المدخل: LEARN · CODE · BUILD THE FUTURE',
       headlineEn: 'Iconic staircase mural inspiring every incoming learner',
-      image: '/src/assets/images/real_entrance_stairs_wallart_1791457711230.jpg',
+      image: realEntranceStairsWallart,
       badgeAr: 'رسالة الأكاديمية الملهمة',
       badgeEn: 'The Academy Guiding Motto',
       highlightAr: '</> LEARN · CODE · BUILD',
