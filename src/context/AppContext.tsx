@@ -153,7 +153,26 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const [courses, setCourses] = useState<Course[]>(() => {
     const saved = localStorage.getItem('ept_courses');
-    return saved ? JSON.parse(saved) : INITIAL_COURSES;
+    if (!saved) return INITIAL_COURSES;
+
+    try {
+      const parsed = JSON.parse(saved) as Course[];
+
+      // Migrate legacy course image paths that pointed to /src/... and therefore
+      // break after a production Vite build. Use the current bundled asset URL
+      // from INITIAL_COURSES while preserving any other admin-edited course data.
+      return parsed.map((course) => {
+        const current = INITIAL_COURSES.find((item) => item.id === course.id);
+        const legacyImage = typeof course.image === 'string' && course.image.startsWith('/src/');
+
+        return {
+          ...course,
+          image: legacyImage ? (current?.image ?? course.image) : (course.image || current?.image || ''),
+        };
+      });
+    } catch {
+      return INITIAL_COURSES;
+    }
   });
 
   const [instructors, setInstructors] = useState<Instructor[]>(() => {
