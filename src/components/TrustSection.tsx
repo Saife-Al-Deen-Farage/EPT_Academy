@@ -1,3 +1,7 @@
+import realStudentCodingLab from '../assets/images/real_student_coding_lab_1791457660513.jpg';
+import realStudentsLabGroup from '../assets/images/real_students_lab_group_1791457670891.jpg';
+import realEnglishLectureHall from '../assets/images/real_english_lecture_hall_1791457694461.jpg';
+
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { 
@@ -129,17 +133,17 @@ export const TrustSection: React.FC = () => {
           <div className="flex items-center gap-4">
             <div className="flex -space-x-3 rtl:space-x-reverse overflow-hidden shrink-0">
               <img
-                src="/src/assets/images/real_student_coding_lab_1791457660513.jpg"
+                src=realStudentCodingLab
                 alt="EPT Coding Lab"
                 className="inline-block h-12 w-12 rounded-full ring-2 ring-slate-950 object-cover"
               />
               <img
-                src="/src/assets/images/real_students_lab_group_1791457670891.jpg"
+                src=realStudentsLabGroup
                 alt="EPT Student Cohort"
                 className="inline-block h-12 w-12 rounded-full ring-2 ring-slate-950 object-cover"
               />
               <img
-                src="/src/assets/images/real_english_lecture_hall_1791457694461.jpg"
+                src=realEnglishLectureHall
                 alt="EPT English Hall"
                 className="inline-block h-12 w-12 rounded-full ring-2 ring-slate-950 object-cover"
               />
