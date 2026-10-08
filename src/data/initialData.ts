@@ -14,6 +14,7 @@ import realStudentsLabGroup from '../assets/images/real_students_lab_group_17914
 import courseDigitalDesign from '../assets/images/course_digital_design_1791456260371.jpg';
 import realComputerWorkstations from '../assets/images/real_computer_workstations_1791457682176.jpg';
 import realEnglishLectureHall from '../assets/images/real_english_lecture_hall_1791457694461.jpg';
+import courseProgrammingLab from '../assets/images/course_programming_lab_1791456247667.jpg';
 
 export const INITIAL_SETTINGS: AcademySettings = {
   nameAr: 'أكاديمية EPT',
@@ -663,7 +664,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
     author: 'فريق EPT Academy الأكاديمي',
     readTimeMinutes: 4,
     date: '2026-09-28',
-    coverImage: '/src/assets/images/course_programming_lab_1791456247667.jpg',
+    coverImage: courseProgrammingLab,
     isDemo: true,
   },
   {
@@ -685,7 +686,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
     author: 'أ. سارة عبد الرحمن',
     readTimeMinutes: 5,
     date: '2026-10-02',
-    coverImage: '/src/assets/images/course_digital_design_1791456260371.jpg',
+    coverImage: courseDigitalDesign,
     isDemo: true,
   },
 ];
