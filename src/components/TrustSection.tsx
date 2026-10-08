@@ -133,17 +133,17 @@ export const TrustSection: React.FC = () => {
           <div className="flex items-center gap-4">
             <div className="flex -space-x-3 rtl:space-x-reverse overflow-hidden shrink-0">
               <img
-                src=realStudentCodingLab
+                src={realStudentCodingLab}
                 alt="EPT Coding Lab"
                 className="inline-block h-12 w-12 rounded-full ring-2 ring-slate-950 object-cover"
               />
               <img
-                src=realStudentsLabGroup
+                src={realStudentsLabGroup}
                 alt="EPT Student Cohort"
                 className="inline-block h-12 w-12 rounded-full ring-2 ring-slate-950 object-cover"
               />
               <img
-                src=realEnglishLectureHall
+                src={realEnglishLectureHall}
                 alt="EPT English Hall"
                 className="inline-block h-12 w-12 rounded-full ring-2 ring-slate-950 object-cover"
               />
