@@ -1,0 +1,6 @@
+{
+  "name": "EPT Academy - English Plus Technology",
+  "description": "الموقع الرسمي لأكاديمية EPT للتعليم والتكنولوجيا والمهارات الرقمية في مصر - نُعلّم مهارات اليوم",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
