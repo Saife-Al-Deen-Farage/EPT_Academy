@@ -192,7 +192,25 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>(() => {
     const saved = localStorage.getItem('ept_blog');
-    return saved ? JSON.parse(saved) : INITIAL_BLOG_POSTS;
+    if (!saved) return INITIAL_BLOG_POSTS;
+
+    try {
+      const parsed = JSON.parse(saved) as BlogPost[];
+
+      // Migrate legacy cover-image paths from /src/assets/... to the
+      // bundled image URLs used by the current INITIAL_BLOG_POSTS data.
+      return parsed.map((post) => {
+        const current = INITIAL_BLOG_POSTS.find((item) => item.id === post.id);
+        const legacyImage = typeof post.coverImage === 'string' && post.coverImage.startsWith('/src/');
+
+        return {
+          ...post,
+          coverImage: legacyImage ? (current?.coverImage ?? post.coverImage) : (post.coverImage || current?.coverImage || ''),
+        };
+      });
+    } catch {
+      return INITIAL_BLOG_POSTS;
+    }
   });
 
   const [comments, setComments] = useState<Comment[]>(() => {
