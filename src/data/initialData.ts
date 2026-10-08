@@ -9,6 +9,11 @@ import {
   LearningPath,
   Review 
 } from '../types';
+import realStudentCodingLab from '../assets/images/real_student_coding_lab_1791457660513.jpg';
+import realStudentsLabGroup from '../assets/images/real_students_lab_group_1791457670891.jpg';
+import courseDigitalDesign from '../assets/images/course_digital_design_1791456260371.jpg';
+import realComputerWorkstations from '../assets/images/real_computer_workstations_1791457682176.jpg';
+import realEnglishLectureHall from '../assets/images/real_english_lecture_hall_1791457694461.jpg';
 
 export const INITIAL_SETTINGS: AcademySettings = {
   nameAr: 'أكاديمية EPT',
@@ -158,7 +163,7 @@ export const INITIAL_COURSES: Course[] = [
     showPrice: true,
     discountPercentage: 0,
     featured: true,
-    image: '/src/assets/images/real_student_coding_lab_1791457660513.jpg',
+    image: realStudentCodingLab,
     isDemo: true,
   },
   {
@@ -218,7 +223,7 @@ export const INITIAL_COURSES: Course[] = [
     showPrice: true,
     discountPercentage: 0,
     featured: true,
-    image: '/src/assets/images/real_students_lab_group_1791457670891.jpg',
+    image: realStudentsLabGroup,
     isDemo: true,
   },
   {
@@ -278,7 +283,7 @@ export const INITIAL_COURSES: Course[] = [
     showPrice: true,
     discountPercentage: 0,
     featured: true,
-    image: '/src/assets/images/course_digital_design_1791456260371.jpg',
+    image: courseDigitalDesign,
     isDemo: true,
   },
   {
@@ -338,7 +343,7 @@ export const INITIAL_COURSES: Course[] = [
     showPrice: true,
     discountPercentage: 0,
     featured: false,
-    image: '/src/assets/images/real_computer_workstations_1791457682176.jpg',
+    image: realComputerWorkstations,
     isDemo: true,
   },
   {
@@ -398,7 +403,7 @@ export const INITIAL_COURSES: Course[] = [
     showPrice: true,
     discountPercentage: 0,
     featured: true,
-    image: '/src/assets/images/course_digital_design_1791456260371.jpg',
+    image: courseDigitalDesign,
     isDemo: true,
   },
   {
@@ -458,7 +463,7 @@ export const INITIAL_COURSES: Course[] = [
     showPrice: true,
     discountPercentage: 0,
     featured: false,
-    image: '/src/assets/images/real_english_lecture_hall_1791457694461.jpg',
+    image: realEnglishLectureHall,
     isDemo: true,
   },
 ];
@@ -562,7 +567,7 @@ export const INITIAL_STUDENT_PROJECTS: StudentProject[] = [
     descriptionEn: 'A responsive administrative dashboard allowing medical clinics to organize appointments and filter patient logs.',
     techStack: ['React', 'Tailwind CSS', 'JavaScript', 'LocalStorage'],
     projectUrl: 'https://github.com',
-    image: '/src/assets/images/real_student_coding_lab_1791457660513.jpg',
+    image: realStudentCodingLab,
     status: 'approved',
     isDemo: true,
   },
@@ -577,7 +582,7 @@ export const INITIAL_STUDENT_PROJECTS: StudentProject[] = [
     descriptionEn: 'Full packaging labels, logo system, and social launch collateral designed using Photoshop and generative AI tools.',
     techStack: ['Photoshop', 'Canva', 'AI Generation', 'Branding'],
     projectUrl: 'https://behance.net',
-    image: '/src/assets/images/course_digital_design_1791456260371.jpg',
+    image: courseDigitalDesign,
     status: 'approved',
     isDemo: true,
   },
@@ -592,7 +597,7 @@ export const INITIAL_STUDENT_PROJECTS: StudentProject[] = [
     descriptionEn: 'Automated Python script that digests batch invoice sheets, generates summarized statistical tables, and exports clean reports.',
     techStack: ['Python', 'OpenPyXL', 'Data Logic', 'CLI'],
     projectUrl: 'https://github.com',
-    image: '/src/assets/images/real_students_lab_group_1791457670891.jpg',
+    image: realStudentsLabGroup,
     status: 'approved',
     isDemo: true,
   },
