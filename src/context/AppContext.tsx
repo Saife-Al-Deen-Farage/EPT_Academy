@@ -225,7 +225,24 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const [studentProjects, setStudentProjects] = useState<StudentProject[]>(() => {
     const saved = localStorage.getItem('ept_projects');
-    return saved ? JSON.parse(saved) : INITIAL_STUDENT_PROJECTS;
+    if (!saved) return INITIAL_STUDENT_PROJECTS;
+
+    try {
+      const parsed = JSON.parse(saved) as StudentProject[];
+
+      // Migrate legacy project image paths stored before the Vite asset fix.
+      return parsed.map((project) => {
+        const current = INITIAL_STUDENT_PROJECTS.find((item) => item.id === project.id);
+        const legacyImage = typeof project.image === 'string' && project.image.startsWith('/src/');
+
+        return {
+          ...project,
+          image: legacyImage ? (current?.image ?? project.image) : (project.image || current?.image || ''),
+        };
+      });
+    } catch {
+      return INITIAL_STUDENT_PROJECTS;
+    }
   });
 
   const [faqs, setFaqs] = useState<FAQItem[]>(() => {
