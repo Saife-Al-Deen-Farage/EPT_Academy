@@ -255,10 +255,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return saved ? JSON.parse(saved) : [];
   });
 
-  const [currentUser, setCurrentUser] = useState<UserSession>(() => {
-    const saved = localStorage.getItem('ept_user');
-    return saved ? JSON.parse(saved) : { id: 'vis-1', name: 'Visitor', email: '', role: 'visitor' };
-  });
+  const [currentUser, setCurrentUser] = useState<UserSession>({ id: 'vis-1', name: 'Visitor', email: '', role: 'visitor' });
 
   // Modal states
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
@@ -320,8 +317,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     localStorage.setItem('ept_messages', JSON.stringify(contactMessages));
   }, [contactMessages]);
 
+  // Never restore or persist privileged roles from browser storage. Authentication must be verified by Supabase.
   useEffect(() => {
-    localStorage.setItem('ept_user', JSON.stringify(currentUser));
+    localStorage.removeItem('ept_user');
   }, [currentUser]);
 
   const toggleLanguage = () => {
@@ -542,15 +540,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   // Auth
-  const loginAsAdmin = (password?: string) => {
-    // Allows rapid access or customized credential
-    setCurrentUser({
-      id: 'admin-1',
-      name: 'مدير النظام (EPT Admin)',
-      email: 'admin@eptacademy.edu.eg',
-      role: 'admin',
-    });
-    return true;
+  const loginAsAdmin = (_password?: string) => {
+    // Legacy demo login is intentionally disabled. Admin access must be verified against Supabase Auth + approved profile role.
+    localStorage.removeItem('ept_user');
+    setCurrentUser({ id: 'vis-1', name: 'Visitor', email: '', role: 'visitor' });
+    return false;
   };
 
   const logout = () => {
