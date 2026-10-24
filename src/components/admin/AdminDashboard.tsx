@@ -128,6 +128,31 @@ export const AdminDashboard: React.FC = () => {
 
   if (!isAdminOpen) return null;
 
+  // The legacy CMS stores its content in localStorage and is not yet wired to Supabase.
+  // Keep it inaccessible until a verified, approved administrator session exists.
+  if (currentUser.role !== 'admin') {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 p-4" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+        <section className="w-full max-w-md rounded-2xl border border-slate-800 bg-slate-900 p-6 text-center shadow-2xl">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
+            <ShieldCheck className="h-7 w-7" />
+          </div>
+          <h2 className="mb-2 text-xl font-bold text-white">{t('لوحة الإدارة مؤمّنة', 'Admin access is protected')}</h2>
+          <p className="mb-5 text-sm leading-7 text-slate-300">
+            {t('تم إيقاف الدخول التجريبي. تسجيل الدخول الإداري الحقيقي وربط صلاحيات Supabase لم يكتمل بعد، لذلك تم إيقاف الوصول إلى لوحة الإدارة مؤقتًا لحماية بيانات الأكاديمية.', 'Demo login has been disabled. Verified Supabase administrator sign-in is not ready yet, so the admin dashboard is temporarily unavailable to protect academy data.')}
+          </p>
+          <button
+            type="button"
+            onClick={() => setIsAdminOpen(false)}
+            className="w-full rounded-lg bg-amber-400 px-4 py-2.5 font-semibold text-slate-950 transition hover:bg-amber-300"
+          >
+            {t('العودة للموقع', 'Back to website')}
+          </button>
+        </section>
+      </div>
+    );
+  }
+
   // Overview metrics
   const totalRegistrations = registrations.length;
   const newRegistrations = registrations.filter(r => r.status === 'new').length;
