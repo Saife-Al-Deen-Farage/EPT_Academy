@@ -32,6 +32,9 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Build
+        env:
+          VITE_SUPABASE_URL: https://mncimjnbzmqeaosismru.supabase.co
+          VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_ue3bPbe7_jb18p-M-G85Jw_qbeX3I5n
         run: npm run build
 
       - name: Setup GitHub Pages
